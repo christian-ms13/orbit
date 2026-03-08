@@ -2,6 +2,22 @@
 
 @theme {
   --color-background: #0f2222;
+  --color-form-active-submit-button-fill: #0ceded;
+  --color-form-input-border: #324242;
+  --color-form-input-fill: #1c2d2d;
+  --color-form-input-placeholder: #e3e8e8;
+  --color-form-input-starting-tag: #0ac0c0;
+  --color-form-input-target-tag: #9d5aeb;
+  --color-form-input-text: #d8dbdb;
+  --color-form-submit-button-fill: #0cd6d6;
+  --color-form-submit-button-text: #102222;
+  --color-overlay-menu-toggle: #46a4a4;
+
+  --drop-shadow-form-input-starting-tag: 0 0 10px #57e3e3;
+  --drop-shadow-form-input-target-tag: 0 0 10px #9d71d0;
+  --drop-shadow-form-submit-button: 0 0 7px #57e3e3;
 
   --font-brand: var(--font-brand);
+  --font-form-input: var(--font-form-input);
+  --font-form-submit-button: var(--font-form-submit-button);
 }
