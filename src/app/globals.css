@@ -1,7 +1,23 @@
 @import "tailwindcss";
 
 @theme {
+  --animate-pulse-fast: pulse-fast 1s cubic-bezier(.4, 0, .6, 1) infinite;
+
   --color-background: #0f2222;
+  --color-connection-graph-border: #0f4040;
+  --color-connection-graph-inner-border: #151f1f;
+  --color-connection-graph-inner-fill: #081414;
+  --color-connection-graph-level-indicator-border: #0e7c7c;
+  --color-connection-graph-level-indicator-fill: #0e4b4b;
+  --color-connection-graph-level-indicator-text: #0df2f2;
+  --color-connection-graph-logo-inner-border: #0defef;
+  --color-connection-graph-logo-inner-fill: #008e9759;
+  --color-connection-graph-logo-outer-border: #095757;
+  --color-connection-graph-path-found-declaration: #0b9595;
+  --color-connection-graph-path-found-value: #0df2f2;
+  --color-connection-graph-starting-ball-fill: #0ac1c1;
+  --color-connection-graph-target-ball-fill: #9c57ea;
+  --color-connection-graph-title: #e7e9e9;
   --color-form-active-submit-button-fill: #0ceded;
   --color-form-input-border: #324242;
   --color-form-input-fill: #1c2d2d;
@@ -13,11 +29,24 @@
   --color-form-submit-button-text: #102222;
   --color-overlay-menu-toggle: #46a4a4;
 
+  --drop-shadow-connection-graph-balls-connection-line: 0 0 8px #57e3e3, 0 0 8px #9d71d0;
+  --drop-shadow-connection-graph-logo: 0 0 10px #00eeff99;
+  --drop-shadow-connection-graph-starting-ball: 0 0 5px #57e3e3;
+  --drop-shadow-connection-graph-target-ball: 0 0 5px #9d71d0;
   --drop-shadow-form-input-starting-tag: 0 0 10px #57e3e3;
   --drop-shadow-form-input-target-tag: 0 0 10px #9d71d0;
   --drop-shadow-form-submit-button: 0 0 7px #57e3e3;
 
   --font-brand: var(--font-brand);
+  --font-connection-graph-path-found-declaration: var(--font-connection-graph-path-found-declaration);
+  --font-connection-graph-path-found-value: var(--font-connection-graph-path-found-value);
+  --font-connection-graph-title-and-level-indicator: var(--font-connection-graph-title-and-level-indicator);
   --font-form-input: var(--font-form-input);
   --font-form-submit-button: var(--font-form-submit-button);
+
+  @keyframes pulse-fast {
+    50% {
+      opacity: .5;
+    }
+  }
 }

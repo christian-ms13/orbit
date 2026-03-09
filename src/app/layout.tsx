@@ -15,6 +15,21 @@ const brandFont = localfont({
   variable: "--font-brand"
 })
 
+const connectionGraphPathFoundDeclarationFont = localfont({
+  src: "../fonts/cascadia-code/regular.woff2",
+  variable: "--font-connection-graph-path-found-declaration"
+})
+
+const connectionGraphPathFoundValueFont = localfont({
+  src: "../fonts/cascadia-code/bold.woff2",
+  variable: "--font-connection-graph-path-found-value"
+})
+
+const connectionGraphTitleAndLevelIndicatorFont = localfont({
+  src: "../fonts/pixelify-sans/regular.woff2",
+  variable: "--font-connection-graph-title-and-level-indicator"
+})
+
 const formInputFont = localfont({
   src: "../fonts/alata/regular.woff2",
   variable: "--font-form-input"
@@ -27,6 +42,9 @@ const formSubmitButtonFont = localfont({
 
 const fonts = [
   brandFont,
+  connectionGraphPathFoundDeclarationFont,
+  connectionGraphPathFoundValueFont,
+  connectionGraphTitleAndLevelIndicatorFont,
   formInputFont,
   formSubmitButtonFont
 ]
@@ -37,12 +55,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className = {`${fonts.map(font => font.variable).join(" ")} antialiased cursor-default select-none`} lang = "en">
-      <body className = "bg-background p-5">
+    <html className = { `${ fonts.map(font => font.variable).join(" ") } antialiased cursor-default select-none` } lang = "en">
+      <body className = "bg-background p-3">
         <Analytics />
         <SpeedInsights />
 
-        { children }
+        {children}
       </body>
     </html>
   )

@@ -7,23 +7,21 @@ export default function Header() {
       <div className = "flex gap-3 items-center">
         <Image
           alt = "Logo"
-          height = { 30 }
+          height = {30}
           priority
           src = "/logo/logo.png"
-          width = { 30 }
+          width = {30}
         />
 
         <h1 
           className = "font-bold font-brand text-3xl text-white tracking-wider uppercase"
-          style = {{
-            textShadow: "0 0 10px #00ffffcc, 0 0 20px #00ffff99, 0 0 30px #00ffff66, 0 0 40px #00ffff33"
-          }}
+          style = {{ textShadow: "0 0 10px #00ffffcc, 0 0 20px #00ffff99, 0 0 30px #00ffff66, 0 0 40px #00ffff33" }}
         >
           orbit
         </h1>
       </div>
 
-      <IconMenu2 className = "text-overlay-menu-toggle" stroke = { 3 } />
+      <IconMenu2 className = "text-overlay-menu-toggle" stroke = {3} />
     </header>
   )
 }
