@@ -1,6 +1,6 @@
 "use client"
 
-import { IconRocket, IconXboxA, IconXboxB } from "@tabler/icons-react"
+import { IconRocket, IconXboxA, IconXboxB, IconX } from "@tabler/icons-react"
 
 export default function Form() {
   const inputsProps = [
@@ -26,15 +26,19 @@ export default function Form() {
       <div className = "flex flex-col gap-2">
         {inputsProps.map(({ Icon, placeholder }, i) => (
           <div
-            className = "bg-form-input-fill border-2 border-form-input-border flex gap-3 items-center px-4 py-3 rounded-[25px]"
+            className = "bg-form-input-fill border-2 border-form-input-border flex items-center justify-between px-4 py-3 rounded-[25px]"
             key = {i}
           >
-            <Icon className = { i === 0 ? "drop-shadow-form-input-starting-tag text-form-input-starting-tag" : "drop-shadow-form-input-target-tag text-form-input-target-tag" } />
+            <div className = "flex items-center justify-start gap-3">
+              <Icon className = { i === 0 ? "drop-shadow-form-input-starting-tag text-form-input-starting-tag" : "drop-shadow-form-input-target-tag text-form-input-target-tag" } />
 
-            <input
-              className = { `${ i === 0 ? "caret-form-input-starting-tag" : "caret-form-input-target-tag" } capitalize flex focus:outline-none font-form-input items-center justify-between placeholder-form-input-placeholder/30 placeholder:normal-case text-form-input-text text-lg w-full` }
-              placeholder = {placeholder}
-            />
+              <input
+                className = { `${ i === 0 ? "caret-form-input-starting-tag" : "caret-form-input-target-tag" } capitalize flex focus:outline-none font-form-input items-center justify-between placeholder-form-input-placeholder/30 placeholder:normal-case text-form-input-text text-lg w-full` }
+                placeholder = {placeholder}
+              />
+            </div>
+
+            <IconX className = "text-form-input-clear-icon" size = {15} />
           </div>
         ))}
       </div>
