@@ -47,7 +47,7 @@ const optimalPathResultsState = localfont({
 })
 
 const optimalPathResultsTitleFont = localfont({
-  src: "../fonts/geo/italic.woff2",
+  src: "../fonts/audiowide/regular.woff2",
   variable: "--font-optimal-path-results-title"
 })
 

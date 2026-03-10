@@ -7,7 +7,7 @@ export default function OptimalPathResults() {
 
   return (
     <div className = "flex flex-col gap-5">
-      <h2 className = "font-optimal-path-results-title text-lg text-optimal-path-results-title uppercase">
+      <h2 className = "font-optimal-path-results-title text-sm text-optimal-path-results-title uppercase">
         {t("optimal-path-results.title")}
       </h2>
 
