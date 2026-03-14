@@ -3,6 +3,10 @@
 @theme {
   --animate-pulse-fast: pulse-fast 1s cubic-bezier(.4, 0, .6, 1) infinite;
 
+  --breakpoint-360: 360px;
+  --breakpoint-390: 390px;
+  --breakpoint-440: 440px;
+
   --color-background: #0f2222;
 
   --color-connection-graph-border: #0f4040;

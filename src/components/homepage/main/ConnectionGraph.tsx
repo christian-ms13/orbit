@@ -26,6 +26,12 @@ export default function ConnectionGraph() {
 
   const { t } = useI18n()
 
+  const responsiveProperties = {
+    "inner.path-round": "360:text-sm 390:text-base",
+    "outer.level-indicator": "360:text-sm 390:text-base",
+    "outer.title": "360:text-lg 390:text-xl"
+  }
+
   useEffect(() => {
     const updatePositions = () => {
       setBalls({
@@ -44,12 +50,12 @@ export default function ConnectionGraph() {
   return (
     <div className = "border border-connection-graph-border flex flex-col gap-5 p-3 rounded-xl w-full">
       <div className = "flex items-center justify-between">
-        <h2 className = "font-connection-graph-title-and-level-indicator text-connection-graph-title uppercase">
+        <h2 className = { `${responsiveProperties["outer.title"]} font-connection-graph-title-and-level-indicator text-connection-graph-title uppercase` }>
           {t("connection-graph.title")}
         </h2>
 
         <span className = "bg-connection-graph-level-indicator-fill border-2 border-connection-graph-level-indicator-border flex items-center justify-center px-2 py-0.5 rounded-lg">
-          <p className = "font-connection-graph-title-and-level-indicator text-connection-graph-level-indicator-text text-xs uppercase">
+          <p className = { `${responsiveProperties["outer.level-indicator"]} font-connection-graph-title-and-level-indicator text-connection-graph-level-indicator-text text-xs uppercase` }>
             {t("connection-graph.level-indicator.standby")}
           </p>
         </span>
@@ -68,11 +74,17 @@ export default function ConnectionGraph() {
             </div>
           </div>
 
-          <div className = "absolute bg-connection-graph-starting-ball-fill drop-shadow-connection-graph-starting-ball h-2 rounded-full w-2" style = {{ left: balls.start.left, top: balls.start.top, transition: "all 2.5s ease-in-out" }} />
-          <div className = "absolute bg-connection-graph-target-ball-fill drop-shadow-connection-graph-target-ball h-2 rounded-full w-2" style = {{ left: balls.target.left, top: balls.target.top, transition: "all 2.5s ease-in-out" }} />
+          <div
+            className = "absolute bg-connection-graph-starting-ball-fill drop-shadow-connection-graph-starting-ball h-2 rounded-full w-2"
+            style = {{ left: balls.start.left, top: balls.start.top, transition: "all 2.5s ease-in-out" }}
+          />
+          <div
+            className = "absolute bg-connection-graph-target-ball-fill drop-shadow-connection-graph-target-ball h-2 rounded-full w-2"
+            style = {{ left: balls.target.left, top: balls.target.top, transition: "all 2.5s ease-in-out" }}
+          />
         </div>
 
-        <p className = "font-connection-graph-path-found-declaration text-connection-graph-path-found-declaration text-xs">
+        <p className = { `${responsiveProperties["inner.path-round"]} font-connection-graph-path-found-declaration text-connection-graph-path-found-declaration text-xs` }>
           {t("connection.path-found")}
           <span className = "animate-pulse-fast font-connection-graph-path-found-state text-connection-graph-path-found-state">
             {t("connection.path-found-state.waiting")}

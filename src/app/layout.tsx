@@ -73,9 +73,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const responsiveProperties = {
+    "body": "440:px-5"
+  }
+
   return (
     <html className = { `${ fonts.map(font => font.variable).join(" ") } antialiased cursor-default select-none` } lang = "en">
-      <body className = "bg-background p-3">
+      <body className = { `${responsiveProperties["body"]} bg-background p-3` }>
         <Analytics />
         <SpeedInsights />
 

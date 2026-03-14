@@ -39,6 +39,12 @@ export default function Form() {
     }
   ]
 
+  const responsiveProperties = {
+    "input.text": "390:text-xl",
+    "submit-button.icon": "360:h-7 360:w-7 390:h-8 390:w-8",
+    "submit-button.text": "360:text-xl 390:text-2xl"
+  }
+
   return (
     <form
       className = "flex flex-col gap-6 w-full"
@@ -54,7 +60,7 @@ export default function Form() {
               <Icon className = { i === 0 ? "drop-shadow-form-input-starting-tag text-form-input-starting-tag" : "drop-shadow-form-input-target-tag text-form-input-target-tag" } />
 
               <input
-                className = { `${ i === 0 ? "caret-form-input-starting-tag" : "caret-form-input-target-tag" } capitalize flex focus:outline-none font-form-input items-center justify-between placeholder-form-input-placeholder/30 placeholder:normal-case text-form-input-text text-lg w-full` }
+                className = { `${ i === 0 ? "caret-form-input-starting-tag" : "caret-form-input-target-tag" } ${responsiveProperties["input.text"]} capitalize flex focus:outline-none font-form-input items-center justify-between placeholder-form-input-placeholder/30 placeholder:normal-case text-form-input-text text-lg w-full` }
                 id = {`user-input-${i}`}
                 onChange = { (e) => handleInputChange(i, e.target.value) }
                 placeholder = {placeholder}
@@ -77,10 +83,10 @@ export default function Form() {
       </div>
 
       <button
-        className = "active:bg-form-active-submit-button-fill bg-form-submit-button-fill drop-shadow-form-submit-button flex font-form-submit-button gap-3 items-center justify-center p-5 rounded-3xl text-form-submit-button-text text-lg tracking-wider uppercase"
+        className = { `${responsiveProperties["submit-button.text"]} active:bg-form-active-submit-button-fill bg-form-submit-button-fill drop-shadow-form-submit-button flex font-form-submit-button gap-3 items-center justify-center p-5 rounded-3xl text-form-submit-button-text text-lg tracking-wider uppercase` }
         type = "submit"
       >
-        <IconRocket size = {23} />
+        <IconRocket className = {responsiveProperties["submit-button.icon"]} size = {23} />
         {t("form.submit")}
       </button>
     </form>

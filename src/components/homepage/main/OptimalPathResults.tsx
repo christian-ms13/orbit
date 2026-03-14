@@ -5,9 +5,13 @@ import { useI18n } from "@/i18n/I18nProvider"
 export default function OptimalPathResults() {
   const { t } = useI18n()
 
+  const responsiveProperties = {
+    "title": "360:text-base 390:text-lg"
+  }
+
   return (
     <div className = "flex flex-col gap-5">
-      <h2 className = "font-optimal-path-results-title text-sm text-optimal-path-results-title uppercase">
+      <h2 className = { `${responsiveProperties["title"]} font-optimal-path-results-title text-sm text-optimal-path-results-title uppercase` }>
         {t("optimal-path-results.title")}
       </h2>
 
