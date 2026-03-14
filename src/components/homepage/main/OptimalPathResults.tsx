@@ -6,7 +6,8 @@ export default function OptimalPathResults() {
   const { t } = useI18n()
 
   const responsiveProperties = {
-    "title": "360:text-base 390:text-lg"
+    "title": "360:text-base 390:text-lg",
+    "state": "360:tracking-widest 390:text-3xl 390:tracking-wider"
   }
 
   return (
@@ -15,7 +16,7 @@ export default function OptimalPathResults() {
         {t("optimal-path-results.title")}
       </h2>
 
-      <h3 className = "animate-pulse-fast font-optimal-path-results-state text-2xl text-center text-optimal-path-results-state tracking-wider uppercase">
+      <h3 className = { `${responsiveProperties["state"]} animate-pulse-fast font-optimal-path-results-state text-2xl text-center text-optimal-path-results-state tracking-wider uppercase` }>
         {t("optimal-path-results.state.waiting")}
       </h3>
     </div>
