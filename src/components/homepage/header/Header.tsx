@@ -9,7 +9,7 @@ import Overlay from "./Overlay"
 export default function Header() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false)
 
-  const { t } = useI18n()
+  const {t} = useI18n()
 
   return (
     <>

@@ -8,6 +8,7 @@ export const dictionaries = {
 
     "form.input.placeholder.starting": "e.g. Pedro Pascal",
     "form.input.placeholder.target": "e.g. Harrison Ford",
+    "form.loading": "calculating...",
     "form.submit": "calculate path",
 
     "header.logo-alt": "Logo",
@@ -29,6 +30,7 @@ export const dictionaries = {
 
     "form.input.placeholder.starting": "ej. Pedro Pascal",
     "form.input.placeholder.target": "ej. Harrison Ford",
+    "form.loading": "calculando...",
     "form.submit": "calcular conexión",
 
     "header.logo-alt": "Logo",

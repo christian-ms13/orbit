@@ -35,22 +35,29 @@ export async function findShortestPath(prevState: PathState, formData: FormData)
   const session = driver.session()
 
   try {
+    const searchName1 = actor1Name.toLowerCase()
+    const searchName2 = actor2Name.toLowerCase()
+
     const query = `
-      MATCH (start:Actor {name: $actor1Name})
-      MATCH (end:Actor {name: $actor2Name})
-      MATCH p = shortestPath((start)-[:ACTED_IN*1..6]-(end))
+      MATCH (start:Actor) WHERE toLower(start.name) = $searchName1
+      MATCH (end:Actor) WHERE toLower(end.name) = $searchName2
+      MATCH p = allShortestPaths((start)-[:ACTED_IN*1..6]-(end))
       RETURN nodes(p) AS pathNodes
     `
 
     const result = await session.executeRead((tx) =>
-      tx.run(query, { actor1Name, actor2Name })
+      tx.run(query, { searchName1, searchName2 })
     )
 
     if (result.records.length === 0) {
       return { message: "❌ no connection found between these actors", success: false }
     }
 
-    const rawNodes = result.records[0].get("pathNodes")
+    const allPaths = result.records
+    const randomIndex = Math.floor(Math.random() * allPaths.length)
+    const selectedRecord = allPaths[randomIndex]
+
+    const rawNodes = selectedRecord.get("pathNodes")
     const path: PathNode[] = rawNodes.map((node: Neo4jNode) => ({
       type: node.labels[0],
       ...node.properties
@@ -59,7 +66,7 @@ export async function findShortestPath(prevState: PathState, formData: FormData)
     return { path, success: true }
 
   } catch (e) {
-    console.error("❌ pathfinding error:", e)
+    console.error("❌ pathfinding error: ", e)
     return { message: "❌ failed to calculate path", success: false }
   } finally {
     await session.close()

@@ -24,7 +24,7 @@ export default function ConnectionGraph() {
     target: { left: "95%", top: "50%" }
   })
 
-  const { t } = useI18n()
+  const {t} = useI18n()
 
   const responsiveProperties = {
     "inner.path-round": "360:text-sm 390:text-base",

@@ -3,7 +3,7 @@
 import { useI18n } from "@/i18n/I18nProvider"
 
 export default function OptimalPathResults() {
-  const { t } = useI18n()
+  const {t} = useI18n()
 
   const responsiveProperties = {
     "title": "360:text-base 390:text-lg",

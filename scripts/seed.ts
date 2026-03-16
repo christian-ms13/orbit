@@ -74,7 +74,7 @@ async function fetchMoviesAndCast() {
 
     console.log("\n🎉 database seed complete!")
   } catch (e) {
-    console.error("❌ error seeding database:", e)
+    console.error("❌ error seeding database: ", e)
   } finally {
     await session.close()
     await driver.close()
