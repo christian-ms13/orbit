@@ -3,6 +3,7 @@
 import { useI18n } from "@/i18n/I18nProvider"
 import { IconMenu2 } from "@tabler/icons-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 import Overlay from "./Overlay"
 
@@ -14,7 +15,14 @@ export default function Header() {
   return (
     <>
       <header className = "flex items-center justify-between">
-        <div className = "flex gap-3 items-center">
+        <Link
+          className = "flex gap-3 items-center"
+          href = "/"
+          onClick = {(event) => {
+            event.preventDefault()
+            window.location.assign("/")
+          }}
+        >
           <Image
             alt = {t("header.logo-alt")}
             height = {30}
@@ -29,7 +37,7 @@ export default function Header() {
           >
             orbit
           </h1>
-        </div>
+        </Link>
 
         <IconMenu2
           className = "text-header-menu-toggle"

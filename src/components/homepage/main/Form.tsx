@@ -1,14 +1,18 @@
 "use client"
 
+import { findShortestPath, PathState } from "@/actions/orbit"
 import { useI18n } from "@/i18n/I18nProvider"
 import { IconRocket, IconX, IconXboxA, IconXboxB } from "@tabler/icons-react"
 import { useState } from "react"
-import { findShortestPath, PathState } from "@/actions/orbit"
 
-export default function Form() {
+interface FormProps {
+  isLoading: boolean
+  setIsLoading: (loading: boolean) => void
+  setResultData: (data: PathState | null) => void
+}
+
+export default function Form({ isLoading, setIsLoading, setResultData }: FormProps) {
   const [inputValues, setInputValues] = useState(["", ""])
-  const [isLoading, setIsLoading] = useState(false)
-  const [resultData, setResultData] = useState<PathState | null>(null)
 
   const {t} = useI18n()
 
@@ -85,6 +89,7 @@ export default function Form() {
               <Icon className = { i === 0 ? "drop-shadow-form-input-starting-tag text-form-input-starting-tag" : "drop-shadow-form-input-target-tag text-form-input-target-tag" } />
 
               <input
+                autoComplete = "off"
                 className = { `${ i === 0 ? "caret-form-input-starting-tag" : "caret-form-input-target-tag" } ${responsiveProperties["input.text"]} capitalize flex focus:outline-none font-form-input items-center justify-between placeholder-form-input-placeholder/30 placeholder:normal-case text-form-input-text text-lg w-full` }
                 id = {`user-input-${i}`}
                 name = {`actor${i + 1}`}
