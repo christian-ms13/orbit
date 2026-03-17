@@ -45,7 +45,7 @@ export default function Form({ isLoading, setIsLoading, setResultData }: FormPro
       formData.append("actor2", inputValues[1])
 
       const response = await findShortestPath(
-        { message: "", success: true },
+        { success: true },
         formData
       )
 
