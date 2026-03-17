@@ -24,9 +24,14 @@ export type PathNode = {
 }
 
 export type PathState = {
-  message?: "optimal-path-results.error.calculation-failed" | "optimal-path-results.error.missing-names" | "optimal-path-results.error.no-connection"
+  message?: "optimal-path-results.error.calculation-failed" | "optimal-path-results.error.misconfigured-environment" | "optimal-path-results.error.missing-names" | "optimal-path-results.error.no-connection"
   path?: PathNode[]
   success: boolean
+}
+
+function hasEnv(name: string): boolean {
+  const value = process.env[name]
+  return typeof value === "string" && value.trim().length > 0
 }
 
 async function expandActorNetwork(actorName: string, session: Session): Promise<boolean> {
@@ -118,10 +123,16 @@ export async function findShortestPath(prevState: PathState, formData: FormData)
     return { message: "optimal-path-results.error.missing-names", success: false }
   }
 
-  const driver = getDriver()
-  const session = driver.session()
+  if (!hasEnv("NEO4J_URI") || !hasEnv("NEO4J_USERNAME") || !hasEnv("NEO4J_PASSWORD") || !hasEnv("TMDB_API_KEY")) {
+    return { message: "optimal-path-results.error.misconfigured-environment", success: false }
+  }
+
+  let session: Session | null = null
 
   try {
+    const driver = getDriver()
+    session = driver.session()
+
     const searchName1 = actor1Name.toLowerCase()
     const searchName2 = actor2Name.toLowerCase()
 
@@ -180,6 +191,8 @@ export async function findShortestPath(prevState: PathState, formData: FormData)
     console.error("❌ error finding shortest path: ", e)
     return { message: "optimal-path-results.error.calculation-failed", success: false }
   } finally {
-    await session.close()
+    if (session) {
+      await session.close()
+    }
   }
 }

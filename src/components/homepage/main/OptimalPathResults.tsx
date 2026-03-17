@@ -23,6 +23,8 @@ export default function OptimalPathResults({ isLoading, resultData }: OptimalPat
     switch (resultData?.message) {
       case "optimal-path-results.error.calculation-failed":
         return t("optimal-path-results.error.calculation-failed")
+      case "optimal-path-results.error.misconfigured-environment":
+        return t("optimal-path-results.error.misconfigured-environment")
       case "optimal-path-results.error.missing-names":
         return t("optimal-path-results.error.missing-names")
       case "optimal-path-results.error.no-connection":

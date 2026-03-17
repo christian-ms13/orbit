@@ -14,6 +14,7 @@ export const dictionaries = {
     "header.logo-alt": "Logo",
 
     "optimal-path-results.error.calculation-failed": "failed to calculate path",
+    "optimal-path-results.error.misconfigured-environment": "server is missing required configuration",
     "optimal-path-results.error.missing-names": "both actor names are required",
     "optimal-path-results.error.no-connection": "no connection found between these actors",
     "optimal-path-results.node.actor": "actor",
@@ -45,6 +46,7 @@ export const dictionaries = {
     "header.logo-alt": "Logo",
 
     "optimal-path-results.error.calculation-failed": "falló el cálculo de la conexión",
+    "optimal-path-results.error.misconfigured-environment": "al servidor le falta configuración requerida",
     "optimal-path-results.error.missing-names": "se requieren ambos nombres de actores",
     "optimal-path-results.error.no-connection": "no se encontró conexión entre estos actores",
     "optimal-path-results.node.actor": "actor",
