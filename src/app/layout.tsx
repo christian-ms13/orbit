@@ -41,7 +41,17 @@ const formSubmitButtonFont = localfont({
   variable: "--font-form-submit-button"
 })
 
-const optimalPathResultsState = localfont({
+const optimalPathResultsResultsDetailsFont = localfont({
+  src: "../fonts/saira-extra-condensed/semibold.woff2",
+  variable: "--font-optimal-path-results-results-details"
+})
+
+const optimalPathResultsResultsTitleFont = localfont({
+  src: "../fonts/ancress/bold.woff2",
+  variable: "--font-optimal-path-results-results-title"
+})
+
+const optimalPathResultsStateFont = localfont({
   src: "../fonts/bebas-neue/regular.woff2",
   variable: "--font-optimal-path-results-state"
 })
@@ -63,7 +73,9 @@ const fonts = [
   connectionGraphTitleAndLevelIndicatorFont,
   formInputFont,
   formSubmitButtonFont,
-  optimalPathResultsState,
+  optimalPathResultsResultsDetailsFont,
+  optimalPathResultsResultsTitleFont,
+  optimalPathResultsStateFont,
   optimalPathResultsTitleFont,
   overlayButtonFont
 ]
@@ -79,7 +91,7 @@ export default function RootLayout({
 
   return (
     <html className = { `${ fonts.map(font => font.variable).join(" ") } antialiased cursor-default select-none` } lang = "en">
-      <body className = { `${responsiveProperties["body"]} bg-background p-3` }>
+      <body className = { `${responsiveProperties["body"]} bg-background p-3 pb-12` }>
         <Analytics />
         <SpeedInsights />
 

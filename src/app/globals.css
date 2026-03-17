@@ -37,7 +37,15 @@
 
   --color-header-menu-toggle: #46a4a4;
 
+  --color-optimal-path-results-card-border: #151f1f;
+  --color-optimal-path-results-card-fill: #081414;
+  --color-optimal-path-results-connection: #607676;
+  --color-optimal-path-results-error: #f23a3a;
+  --color-optimal-path-results-origin: #0ac1c1;
   --color-optimal-path-results-state: #0df2f2;
+  --color-optimal-path-results-target: #9c57ea;
+  --color-optimal-path-results-text-primary: #e7e9e9;
+  --color-optimal-path-results-text-secondary: #8a9c9c;
   --color-optimal-path-results-title: #e7e9e9;
   
   --color-overlay-button-border: #151f1f;
@@ -66,6 +74,10 @@
   --drop-shadow-form-input-target-tag: 0 0 10px #9d71d0;
   --drop-shadow-form-submit-button: 0 0 7px #57e3e3;
 
+  --drop-shadow-optimal-path-results-connection: 0 0 5px #151f1f;
+  --drop-shadow-optimal-path-results-origin: 0 0 10px #57e3e3;
+  --drop-shadow-optimal-path-results-target: 0 0 10px #9d71d0;
+
   --font-brand: var(--font-brand);
 
   --font-connection-graph-path-found-declaration: var(--font-connection-graph-path-found-declaration);
@@ -75,8 +87,11 @@
   --font-form-input: var(--font-form-input);
   --font-form-submit-button: var(--font-form-submit-button);
   
+  --font-optimal-path-results-results-details: var(--font-optimal-path-results-results-details);
+  --font-optimal-path-results-results-title: var(--font-optimal-path-results-results-title);
   --font-optimal-path-results-state: var(--font-optimal-path-results-state);
   --font-optimal-path-results-title: var(--font-optimal-path-results-title);
+
   --font-overlay-button: var(--font-overlay-button);
 
   @keyframes pulse-fast {

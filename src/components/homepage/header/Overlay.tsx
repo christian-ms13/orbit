@@ -58,6 +58,8 @@ export default function Overlay({onClose}: OverlayProps) {
             className = {buttonClassName}
             href = {href}
             key = {i}
+            rel = "noopener noreferrer"
+            target = "_blank"
           >
             {icon}
             <span
