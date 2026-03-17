@@ -41,15 +41,15 @@ export default function OptimalPathResults({ isLoading, resultData }: OptimalPat
       </h2>
 
       {isLoading ? (
-        <h3 className = { `animate-pulse ${responsiveProperties.state} font-optimal-path-results-state text-2xl text-center text-optimal-path-results-state tracking-wider uppercase` }>
+        <h3 className = { `${responsiveProperties.state} animate-pulse-fast font-optimal-path-results-state text-2xl text-center text-optimal-path-results-state tracking-wider uppercase` }>
           {t("optimal-path-results.state.calculating")}
         </h3>
       ) : resultData && !resultData.success ? (
-        <h3 className = { `animate-pulse ${responsiveProperties.state} font-optimal-path-results-state text-2xl text-center text-optimal-path-results-error tracking-wider uppercase` }>
+        <h3 className = { `${responsiveProperties.state} animate-pulse-fast font-optimal-path-results-state text-2xl text-center text-optimal-path-results-error tracking-wider uppercase` }>
           {getErrorMessage()}
         </h3>
       ) : !resultData?.path ? (
-        <h3 className = { `animate-pulse-fast ${responsiveProperties.state} font-optimal-path-results-state text-2xl text-center text-optimal-path-results-state tracking-wider uppercase` }>
+        <h3 className = { `${responsiveProperties.state} animate-pulse-fast font-optimal-path-results-state text-2xl text-center text-optimal-path-results-state tracking-wider uppercase` }>
           {t("optimal-path-results.state.waiting")}
         </h3>
       ) : (
@@ -130,11 +130,11 @@ export default function OptimalPathResults({ isLoading, resultData }: OptimalPat
                         </h4>
 
                         {isActor ? (
-                          <span className = { `${colorClass} font-optimal-path-results-results-details mt-1 text-[0.625rem] tracking-widest uppercase` }>
+                          <span className = { `${colorClass} font-optimal-path-results-results-details mt-1 text-[0.9rem] tracking-widest uppercase` }>
                             { isStart ? t("optimal-path-results.results.origin-actor") : isEnd ? t("optimal-path-results.results.target-actor") : t("optimal-path-results.results.connection") }
                           </span>
                         ) : (
-                          <div className = "flex flex-col font-optimal-path-results-results-details gap-0.5 mt-1 text-[0.625rem] tracking-wider">
+                          <div className = "flex flex-col font-optimal-path-results-results-details gap-0.5 mt-1 text-[0.9rem] tracking-wider">
                             {releaseYear && (
                               <span className = "text-optimal-path-results-text-secondary">
                                 {releaseYear}
