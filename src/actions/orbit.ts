@@ -9,18 +9,55 @@ interface Neo4jNode {
 
 export type PathNode = {
   [key: string]: unknown
-  id?: string
+  genres?: string[]
+  id?: number
+  language?: string
   name?: string
   poster?: string
   profile?: string
+  release_date?: string
+  runtime?: number
   title?: string
   type: string
+  vote_average?: number
 }
 
 export type PathState = {
   message?: string
   path?: PathNode[]
   success: boolean
+}
+
+async function fetchTMDBDetails(id: number | string, type: string): Promise<Partial<PathNode>> {
+  const apiKey = process.env.TMDB_API_KEY
+
+  try {
+    if (type === "Movie") {
+      const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
+      const data = await res.json()
+
+      return {
+        genres: data.genres?.map((g: { name: string }) => g.name) || [],
+        language: data.spoken_languages?.[0]?.english_name || data.original_language,
+        poster: data.poster_path ? `https://image.tmdb.org/t/p/w500${data.poster_path}` : undefined,
+        release_date: data.release_date,
+        runtime: data.runtime,
+        title: data.title,
+        vote_average: data.vote_average
+      }
+    }
+
+    const res = await fetch(`https://api.themoviedb.org/3/person/${id}?api_key=${apiKey}`)
+    const data = await res.json()
+
+    return {
+      name: data.name,
+      profile: data.profile_path ? `https://image.tmdb.org/t/p/w500${data.profile_path}` : undefined
+    }
+  } catch (e) {
+    console.error(`❌ failed to fetch tmdb details for ${type} ${id}: `, e)
+    return {}
+  }
 }
 
 export async function findShortestPath(prevState: PathState, formData: FormData): Promise<PathState> {
@@ -58,13 +95,26 @@ export async function findShortestPath(prevState: PathState, formData: FormData)
     const selectedRecord = allPaths[randomIndex]
 
     const rawNodes = selectedRecord.get("pathNodes")
-    const path: PathNode[] = rawNodes.map((node: Neo4jNode) => ({
-      type: node.labels[0],
-      ...node.properties
-    })) as PathNode[]
 
-    return { path, success: true }
+    const basicPath = rawNodes.map((node: Neo4jNode) => ({
+      id: node.properties.id as number,
+      name: node.properties.name as string | undefined,
+      title: node.properties.title as string | undefined,
+      type: node.labels[0]
+    }))
 
+    const hydratedPath = await Promise.all(
+      basicPath.map(async (node: { id: number; name?: string; title?: string; type: string }) => {
+        const tmdbDetails = await fetchTMDBDetails(node.id, node.type)
+
+        return {
+          ...node,
+          ...tmdbDetails
+        }
+      })
+    )
+
+    return { path: hydratedPath as PathNode[], success: true }
   } catch (e) {
     console.error("❌ pathfinding error: ", e)
     return { message: "❌ failed to calculate path", success: false }
