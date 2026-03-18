@@ -43,7 +43,7 @@ export default function Overlay({onClose}: OverlayProps) {
 
   return (
     <div
-      className = "backdrop-blur-xl bg-black/80 fixed flex flex-col items-center justify-center left-0 min-h-screen px-14 top-0 w-full z-2"
+      className = "backdrop-blur-xl bg-black/80 fixed flex flex-col items-center justify-center left-0 min-h-screen px-14 top-0 w-full z-3"
       onClick = {onClose}
     >
       <IconX

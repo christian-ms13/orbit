@@ -11,6 +11,8 @@ export const dictionaries = {
     "connection.path-found-state.true": "true",
     "connection.path-found-state.waiting": "waiting...",
 
+    "form.autocomplete.loading": "searching actors...",
+    "form.autocomplete.no-results": "no actor suggestions found",
     "form.input.placeholder.starting": "e.g. Michael B. Jordan",
     "form.input.placeholder.target": "e.g. Ryan Gosling",
     "form.loading": "calculating...",
@@ -48,6 +50,8 @@ export const dictionaries = {
     "connection.path-found-state.true": "verdadero",
     "connection.path-found-state.waiting": "esperando...",
 
+    "form.autocomplete.loading": "buscando actores...",
+    "form.autocomplete.no-results": "no se encontraron sugerencias",
     "form.input.placeholder.starting": "ej. Michael B. Jordan",
     "form.input.placeholder.target": "ej. Ryan Gosling",
     "form.loading": "calculando...",
