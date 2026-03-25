@@ -15,7 +15,12 @@
   --color-background: #0f2222;
 
   --color-connection-graph-border: #0f4040;
+  --color-connection-graph-desktop-inner-ball-fill: #ffffff;
+  --color-connection-graph-desktop-inner-ball-wrapper-border: #153f41;
   --color-connection-graph-inner-border: #151f1f;
+  --color-connection-graph-inner-desktop-border-gradient-0: #148f9300;
+  --color-connection-graph-inner-desktop-border-gradient-1: #148f93;
+  --color-connection-graph-inner-desktop-border-gradient-2: #148f9300;
   --color-connection-graph-inner-fill: #081414;
   --color-connection-graph-level-indicator-border: #0e7c7c;
   --color-connection-graph-level-indicator-fill: #0e4b4b;
@@ -23,19 +28,20 @@
   --color-connection-graph-logo-inner-border: #0defef;
   --color-connection-graph-logo-inner-fill: #008e9759;
   --color-connection-graph-logo-outer-border: #095757;
+  --color-connection-graph-outer-desktop-border: #104b4b;
   --color-connection-graph-path-found-declaration: #0b9595;
-  --color-connection-graph-path-found-state: #0df2f2;
   --color-connection-graph-path-found-state-false: #f23a3a;
   --color-connection-graph-path-found-state-true: #9c57ea;
+  --color-connection-graph-path-found-state: #0df2f2;
   --color-connection-graph-starting-ball-fill: #0ac1c1;
-  --color-connection-graph-starting-ball-glow: #57e3e3;
   --color-connection-graph-starting-ball-glow-soft: #57e3e399;
+  --color-connection-graph-starting-ball-glow: #57e3e3;
   --color-connection-graph-status-error-border: #f23a3a;
   --color-connection-graph-status-error-fill: #2a0a0a;
   --color-connection-graph-status-path-length: #9c57ea;
   --color-connection-graph-target-ball-fill: #9c57ea;
-  --color-connection-graph-target-ball-glow: #b985ff;
   --color-connection-graph-target-ball-glow-soft: #b985ff99;
+  --color-connection-graph-target-ball-glow: #b985ff;
   --color-connection-graph-title: #e7e9e9;
 
   --color-footer-copyright: #69747c;

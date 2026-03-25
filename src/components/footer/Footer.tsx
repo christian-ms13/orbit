@@ -60,11 +60,11 @@ export default function Footer() {
           {isOpen && (
             <>
               <div
-                className = "fixed inset-0 z-2"
+                className = "fixed inset-0 z-1"
                 onClick = { () => setIsOpen(false) }
               />
 
-              <div className = "absolute bg-footer-fill bottom-full flex flex-col font-bold font-brand-and-desktop-language-options gap-1 mb-2 py-2 right-0 rounded text-footer-language-option-text tracking-wider w-max z-3">
+              <div className = "absolute bg-footer-fill bottom-full flex flex-col font-bold font-brand-and-desktop-language-options gap-1 mb-2 py-2 right-0 rounded text-footer-language-option-text tracking-wider w-max z-2">
                 {languageOptions.map((lang) => (
                   <button
                     className = { `${ language === lang.locale ? "cursor-not-allowed opacity-30" : "cursor-pointer" } capitalize hover:bg-footer-language-option-text-hover px-2 py-1` }

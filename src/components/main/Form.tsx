@@ -310,7 +310,7 @@ export default function Form({ isLoading, setIsLoading, setResultData }: FormPro
 
         {openDropdownIndex === i && sanitizeActorNameInput(inputValues[i]).length >= 1 && (
           <div
-            className = "absolute backdrop-blur-md bg-[#0a1515f0] border border-form-input-border left-0 mt-2 overflow-hidden right-0 rounded-2xl top-full z-2"
+            className = "absolute backdrop-blur-md bg-[#0a1515f0] border border-form-input-border left-0 mt-2 overflow-hidden right-0 rounded-2xl top-full z-1"
             id = {`actor-suggestions-${i}`}
             role = "listbox"
           >
@@ -389,7 +389,7 @@ export default function Form({ isLoading, setIsLoading, setResultData }: FormPro
         `}
       </style>
 
-      <div className = { `${responsiveProperties["form.wrapper"]} flex items-center justify-center w-full` }>
+      <div className = { `${responsiveProperties["form.wrapper"]} flex items-center justify-center relative w-full z-1` }>
         <form
           className = { `${responsiveProperties["form"]} flex flex-col gap-6 w-full` }
           onSubmit = {handleSubmit}
