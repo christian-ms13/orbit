@@ -11,7 +11,7 @@ export default function Main() {
   const [resultData, setResultData] = useState<PathState | null>(null)
 
   return (
-    <main className = "flex flex-col gap-10">
+    <main className = "flex flex-1 flex-col gap-10">
       <Form
         isLoading = {isLoading} 
         setIsLoading = {setIsLoading} 

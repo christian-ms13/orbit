@@ -11,6 +11,11 @@ export const dictionaries = {
     "connection.path-found-state.true": "true",
     "connection.path-found-state.waiting": "waiting...",
 
+    "footer.copyright": "© 2026 Orbit Pathfinding. Developed by Christian Millán.",
+    "footer.github": "GitHub profile",
+    "footer.linkedin": "LinkedIn profile",
+    "footer.longer-copyright": "© 2026 Orbit Pathfinding. Developed by Christian Millán. Exploring the cinematic universe.",
+
     "form.autocomplete.loading": "Searching actors...",
     "form.autocomplete.no-results": "No actor suggestions found",
     "form.description": "Discover the degrees of separation between any two stars in the galaxy.",
@@ -56,6 +61,11 @@ export const dictionaries = {
     "connection.path-found-state.false": "false",
     "connection.path-found-state.true": "true",
     "connection.path-found-state.waiting": "esperando...",
+
+    "footer.copyright": "© 2026 Orbit Pathfinding. Desarrollado por Christian Millán.",
+    "footer.github": "Perfil de GitHub",
+    "footer.linkedin": "Perfil de LinkedIn",
+    "footer.longer-copyright": "© 2026 Orbit Pathfinding. Desarrollado por Christian Millán. Explorando el universo cinematográfico.",
 
     "form.autocomplete.loading": "Buscando actores...",
     "form.autocomplete.no-results": "No se encontraron sugerencias",

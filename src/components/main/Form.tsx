@@ -3,7 +3,7 @@
 import { findShortestPath, PathState } from "@/actions/orbit"
 import { useI18n } from "@/i18n/I18nProvider"
 import { sanitizeActorNameInput } from "@/lib/actorName"
-import { IconRocket, IconSwitchHorizontal, IconX, IconXboxA, IconXboxB, IconZoom, IconAiGateway } from "@tabler/icons-react"
+import { IconAiGateway, IconRocket, IconSwitchHorizontal, IconX, IconXboxA, IconXboxB, IconZoom } from "@tabler/icons-react"
 import { useEffect, useRef, useState } from "react"
 
 interface FormProps {

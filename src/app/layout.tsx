@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description: "Find the cinematic connection between any two stars."
 }
 
-const brandFont = localfont({
+const brandAndDesktopLanguageOptionsFont = localfont({
   src: "../fonts/fixga/regular.woff2",
-  variable: "--font-brand"
+  variable: "--font-brand-and-desktop-language-options"
 })
 
 const connectionGraphPathFoundDeclarationFont = localfont({
@@ -29,6 +29,11 @@ const connectionGraphPathFoundStateFont = localfont({
 const connectionGraphTitleAndLevelIndicatorFont = localfont({
   src: "../fonts/pixelify-sans/regular.woff2",
   variable: "--font-connection-graph-title-and-level-indicator"
+})
+
+const footerFont = localfont({
+  src: "../fonts/belgrano/regular.woff2",
+  variable: "--font-footer"
 })
 
 const formDescriptionFont = localfont({
@@ -82,10 +87,11 @@ const overlayButtonFont = localfont({
 })
 
 const fonts = [
-  brandFont,
+  brandAndDesktopLanguageOptionsFont,
   connectionGraphPathFoundDeclarationFont,
   connectionGraphPathFoundStateFont,
   connectionGraphTitleAndLevelIndicatorFont,
+  footerFont,
   formDescriptionFont,
   formInputFont,
   formSubmitButtonFont,

@@ -22,7 +22,7 @@ export default function Header() {
     {
       icon: <IconBrandGithub />,
       tooltip: t("header.projects.github"),
-      url: "https://github.com/christian-ms13/orbit"
+      url: "https://github.com/christianms13/orbit"
     }
   ]
 
@@ -52,7 +52,7 @@ export default function Header() {
           />
 
           <h1 
-            className = "font-bold font-brand text-3xl text-white tracking-wider uppercase"
+            className = "font-bold font-brand-and-desktop-language-options text-3xl text-white tracking-wider uppercase"
             style = {{ textShadow: "var(--text-shadow-header-title)" }}
           >
             orbit

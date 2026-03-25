@@ -38,6 +38,15 @@
   --color-connection-graph-target-ball-glow-soft: #b985ff99;
   --color-connection-graph-title: #e7e9e9;
 
+  --color-footer-copyright: #69747c;
+  --color-footer-fill: #0c1b1b;
+  --color-footer-language-hover: #b3bcc2;
+  --color-footer-language-option-text-hover: #264d4d;
+  --color-footer-language-option-text: #cdd3d6;
+  --color-footer-language: #7c8c96;
+  --color-footer-socials-hover: #b3bcc2;
+  --color-footer-socials: #7c8c96;
+
   --color-form-active-submit-button-fill: #0ceded;
   --color-form-description: #808fa2;
   --color-form-desktop-border: #28383b;
@@ -127,11 +136,13 @@
 
   --text-shadow-header-title: 0 0 10px #00ffffcc, 0 0 20px #00ffff99, 0 0 30px #00ffff66, 0 0 40px #00ffff33;
 
-  --font-brand: var(--font-brand);
+  --font-brand-and-desktop-language-options: var(--font-brand-and-desktop-language-options);
 
   --font-connection-graph-path-found-declaration: var(--font-connection-graph-path-found-declaration);
   --font-connection-graph-path-found-state: var(--font-connection-graph-path-found-state);
   --font-connection-graph-title-and-level-indicator: var(--font-connection-graph-title-and-level-indicator);
+
+  --font-footer: var(--font-footer);
 
   --font-form-description: var(--font-form-description);
   --font-form-input: var(--font-form-input);
