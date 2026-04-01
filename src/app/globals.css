@@ -97,18 +97,23 @@
   --color-optimal-path-results-card-border: #151f1f;
   --color-optimal-path-results-card-fill: #081414;
   --color-optimal-path-results-connection: #607676;
+  --color-optimal-path-results-desktop-actor-and-movie-name-and-title: #ffffff;
+  --color-optimal-path-results-desktop-actor-and-movie-tag: #5f6a78;
   --color-optimal-path-results-desktop-description: #9098a4;
+  --color-optimal-path-results-desktop-results-wrapper-border: #141c1d;
+  --color-optimal-path-results-desktop-results-wrapper-fill: #0a1212;
   --color-optimal-path-results-desktop-summary-separator: #1d2526;
   --color-optimal-path-results-desktop-summary-title: #667282;
   --color-optimal-path-results-desktop-title-icon-fill: #0df2f2;
   --color-optimal-path-results-desktop-title: #fdfcff;
   --color-optimal-path-results-error: #f23a3a;
+  --color-optimal-path-results-hover-desktop-actor-and-movie-name-and-title: #e2e1e1;
   --color-optimal-path-results-origin: #0ac1c1;
   --color-optimal-path-results-state: #0df2f2;
   --color-optimal-path-results-summary-era-spanned-and-total-runtime-value: #0df2f2;
   --color-optimal-path-results-summary-shared-genres-value: #ffffff;
   --color-optimal-path-results-summary-total-degrees-value: #a855f7;
-  --color-optimal-path-results-summary-wrapper-border: #212D34;
+  --color-optimal-path-results-summary-wrapper-border: #212d34;
   --color-optimal-path-results-summary-wrapper-fill: #091414;
   --color-optimal-path-results-summary-wrapper-tab-title: #667282;
   --color-optimal-path-results-target: #9c57ea;
@@ -148,6 +153,9 @@
   --drop-shadow-form: 0 0 20px #0000007e;
 
   --drop-shadow-optimal-path-results-connection: 0 0 5px #151f1f;
+  --drop-shadow-optimal-path-results-desktop-connection: 0 0 15px #6c7c7c;
+  --drop-shadow-optimal-path-results-desktop-origin: 0 0 15px #00f0ff;
+  --drop-shadow-optimal-path-results-desktop-target: 0 0 15px #995ae2;
   --drop-shadow-optimal-path-results-origin: 0 0 10px #57e3e3;
   --drop-shadow-optimal-path-results-target: 0 0 10px #9d71d0;
 

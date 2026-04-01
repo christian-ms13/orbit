@@ -32,7 +32,9 @@ export const dictionaries = {
     "header.projects.figma": "check figma design",
     "header.projects.github": "check github code",
 
+    "optimal-path-results.desktop-actor.tag": "actor",
     "optimal-path-results.desktop-description": "A detailed breakdown of the cinematic links.",
+    "optimal-path-results.desktop-movie.tag": "movie",
     "optimal-path-results.desktop-summary.era-spanned": "era spanned",
     "optimal-path-results.desktop-summary.none": "none",
     "optimal-path-results.desktop-summary.shared-genres": "shared genres",
@@ -90,7 +92,9 @@ export const dictionaries = {
     "header.projects.figma": "ver diseño en figma",
     "header.projects.github": "ver código en github",
 
+    "optimal-path-results.desktop-actor.tag": "actor",
     "optimal-path-results.desktop-description": "Un desglose detallado de los enlaces cinematográficos.",
+    "optimal-path-results.desktop-movie.tag": "filme",
     "optimal-path-results.desktop-summary.era-spanned": "lapso cubierto",
     "optimal-path-results.desktop-summary.none": "ninguno",
     "optimal-path-results.desktop-summary.shared-genres": "estilos compartidos",

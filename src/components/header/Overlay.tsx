@@ -35,7 +35,7 @@ export default function Overlay({onClose}: OverlayProps) {
     {
       gradient: false,
       gradientAlternative: "text-overlay-button-github",
-      href: "https://github.com/christianms13/orbit",
+      href: "https://github.com/chriistianms/orbit",
       icon: <IconBrandGithub />,
       text: t("overlay.github")
     }

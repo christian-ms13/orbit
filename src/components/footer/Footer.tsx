@@ -28,7 +28,7 @@ export default function Footer() {
 
   const socialProfilesProps = [
     {
-      href: "https://github.com/christianms13",
+      href: "https://github.com/chriistianms",
       title: t("footer.github")
     },
     {

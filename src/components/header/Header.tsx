@@ -22,7 +22,7 @@ export default function Header() {
     {
       icon: <IconBrandGithub />,
       tooltip: t("header.projects.github"),
-      url: "https://github.com/christianms13/orbit"
+      url: "https://github.com/chriistianms/orbit"
     }
   ]
 
